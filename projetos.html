@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Projetos</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="projetos.html">Projetos</a>
+    </nav>
+  </header>
+
+  <section id="projetos">
+    <div class="projetos">
+
+      <div class="projeto">
+        <h3>Quiosque Interativo Filmes</h3>
+        <p>A aplicação surgiu de um brainstorming que inicialmente pensou em lojas de vinis e roupas, mas decidiu focar na amostra de cassetes VHS, inspirada nas antigas lojas Blockbuster dos anos 90.</p>
+        <div class="mais-texto">
+          <p>O objetivo é criar uma experiência interativa, com animações e sons, permitindo ao usuário escolher filmes de três categorias (terror, comédia e animação) e visualizar informações como título e sinopse.</p>
+          <img src="Fotos/Inicial.png" alt="Pagina Inicial" class="imagem-extra">
+          <img src="Fotos/Categorias.png" alt="Categorias" class="imagem-extra">
+          <img src="Fotos/filme.png" alt="Sobre o filme" class="imagem-extra">
+          <img src="Fotos/sobre.png" alt="Sobre nós" class="imagem-extra">
+        </div>
+        <button class="ver-mais-btn">Ver mais</button>
+      </div>
+
+      <div class="projeto">
+        <h3>Aplicação Educacional e Lúdica</h3>
+        <p>O objetivo do projeto é criar uma aplicação interativa voltada para crianças do ensino primário, com foco na educação alimentar e nutrição saudável.</p>
+        <div class="mais-texto">
+          <p>Inclui jogos educativos e recursos multimídia adaptados para captar a atenção do público infantil. São apresentados conceitos como os grupos alimentares com personagens e histórias adequadas à idade.</p>
+          <img src="Fotos/ludico.png" alt="Aplicação lúdica" class="imagem-extra">
+        </div>
+        <button class="ver-mais-btn">Ver mais</button>
+      </div>
+
+      <div class="projeto">
+        <h3>Minhas Telas</h3>
+        <p>Abaixo podes ver algumas telas que pintei, onde apresento alguma da minha indentidade, creatividade. Cada tela representa uma parte importante da minha historia de vida e da minha essencia.</p>
+        <div class="mais-texto">
+          <img src="Fotos/1tele.jpg" alt="Aplicação lúdica" class="imagem-extra">
+          <img src="Fotos/2tele.jpg" alt="Aplicação lúdica" class="imagem-extra">
+          <img src="Fotos/3tele.jpg" alt="Aplicação lúdica" class="imagem-extra">
+        </div>
+        <button class="ver-mais-btn">Ver mais</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Carla Moutinho. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.ver-mais-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const projeto = button.parentElement;
+        const maisTexto = projeto.querySelector('.mais-texto');
+        const isHidden = maisTexto.style.display === 'none' || maisTexto.style.display === '';
+        maisTexto.style.display = isHidden ? 'block' : 'none';
+        button.textContent = isHidden ? 'Ver menos' : 'Ver mais';
+      });
+    });
+  </script>
+</body>
+</html>
